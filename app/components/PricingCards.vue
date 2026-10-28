@@ -6,6 +6,21 @@ const packages = [
 ]
 </script>
 <template>
-  <div class="pricing-grid"><article v-for="(item, index) in packages" :key="item.key" class="price-card" :class="{ 'price-card-featured': index === 1 }"><div class="price-card-top"><span class="eyebrow">0{{ index + 1 }} / {{ item.name }}</span><span v-if="index === 1" class="small-tag">Room to grow</span></div><h3><span>RM</span> {{ item.price }}</h3><p>{{ item.description }}</p><div class="package-size">{{ item.pages }}</div><ul class="check-list"><li v-for="feature in item.features" :key="feature">{{ feature }}</li></ul><NuxtLink class="button" :class="index === 1 ? 'button-dark' : 'button-outline'" :to="`/contact?package=${item.key}`">Explore {{ item.name }} <span aria-hidden="true">↗</span></NuxtLink><p class="renewal">Then RM{{ item.renewal }}/year for hosting &amp; SSL.</p></article></div>
+  <div class="pricing-grid">
+    <article v-for="(item, index) in packages" :key="item.key" class="price-card" :class="{ 'price-card-featured': item.key === 'business' }" :aria-labelledby="`plan-${item.key}`">
+      <div class="price-card-top">
+        <span class="eyebrow">WEBSITE PACKAGE / 0{{ index + 1 }}</span>
+        <span v-if="item.key === 'business'" class="recommended-badge">Recommended</span>
+      </div>
+      <h3 :id="`plan-${item.key}`" class="package-name">{{ item.name }}</h3>
+      <p class="package-description">{{ item.description }}</p>
+      <p class="package-price"><span>RM</span> {{ item.price }}</p>
+      <p class="price-context">Proposed starting price</p>
+      <div class="package-size">{{ item.pages }}</div>
+      <ul class="check-list"><li v-for="feature in item.features" :key="feature">{{ feature }}</li></ul>
+      <NuxtLink class="button" :class="item.key === 'business' ? 'button-light' : 'button-dark'" :to="`/contact?package=${item.key}`">Explore {{ item.name }} <span aria-hidden="true">↗</span></NuxtLink>
+      <p class="renewal"><strong>RM{{ item.renewal }}/year after year one</strong><span>Hosting &amp; SSL renewal</span></p>
+    </article>
+  </div>
   <p class="pricing-note">Proposed starting prices, subject to final scope. First-year hosting &amp; SSL included. Domain registration is separate.</p>
 </template>

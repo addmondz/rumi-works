@@ -14,3 +14,115 @@
 @media(max-width:600px){.container{width:calc(100% - 40px)}.nav-bar{height:74px}.brand{font-size:25px}.brand svg{width:23px;height:23px}.menu-toggle{font-size:12px}.menu-toggle span:last-child{font-size:22px}.hero{padding-top:37px;padding-bottom:28px;gap:25px;min-height:0}.hero-eyebrow{font-size:7px;letter-spacing:1px;gap:7px;margin-bottom:24px}.hero h1{font-size:clamp(46px,11.3vw,66px);line-height:1.02;letter-spacing:-2.6px;margin-bottom:23px}.hero-description{font-size:13px;line-height:1.7;margin-bottom:23px;max-width:340px}.hero-actions{gap:18px;align-items:center}.hero-actions .button{font-size:11px;min-height:47px;padding:15px 16px;gap:15px}.hero-actions .text-link{font-size:10px;gap:7px}.hero-footnote{font-size:9px;margin-top:24px;gap:7px}.tiny-symbol{font-size:21px}.hero-visual{height:calc((100vw - 40px)*1.02 + 50px);padding:8px 0}.visual-caption{font-size:7px;margin:0 8px 19px 8px}.visual-caption>span:last-child{display:none}.hero-browser{left:3px;top:32px;width:91%;border-radius:5px}.hero-software{right:0;top:calc((100vw - 40px)*.43 + 18px);width:90%;border-radius:5px}.browser-bar{height:19px;font-size:5px;padding-inline:7px}.browser-dots{font-size:4px;letter-spacing:1px}.hero-sticker{width:65px;height:65px;font-size:9px;top:130px;right:-6px}.hero-sticker span{font-size:19px}.concept-caption{font-size:7px;bottom:0;right:5px}.value-strip .container{justify-content:space-between;gap:8px;flex-wrap:wrap;padding-block:17px;font-size:9px}.value-strip i{font-size:17px}.value-strip span:nth-of-type(3),.value-strip i:nth-of-type(2){display:none}.section{padding-block:58px}h2{font-size:36px;letter-spacing:-1.6px;line-height:1.1}.eyebrow{font-size:8px;letter-spacing:1.2px;margin-bottom:20px}.section-heading{margin-bottom:30px}.heading-split{display:block}.heading-split>p,.heading-split>div:last-child>p{max-width:none;font-size:13px;margin-top:22px}.heading-split .text-link{font-size:11px;margin-top:2px}.service-grid{grid-template-columns:1fr;gap:32px}.service-card:first-child,.service-card:last-child{padding:23px 0 0}.service-top{margin-bottom:18px}.service-top .eyebrow{font-size:8px}.service-icon{font-size:34px}.service-card h3{font-size:29px;max-width:300px;margin-bottom:13px}.service-card p{font-size:13px;margin-bottom:20px}.tag-list{gap:5px}.tag-list>span{font-size:8px;padding:6px 9px}.service-link{margin-top:25px;padding-top:20px;font-size:12px}.work-grid{grid-template-columns:1fr;gap:36px;margin-top:35px}.work-art{height:auto;aspect-ratio:1.25;padding:25px}.work-card:hover .work-art{padding:21px}.work-card-info{padding-top:20px}.work-card-info .eyebrow{font-size:7px;margin-bottom:7px}.work-card-info h3{font-size:24px}.work-card-info p{font-size:11px}.circle-arrow{width:34px;height:34px;font-size:19px}.work-disclosure{font-size:9px;margin-top:28px}.process-section{grid-template-columns:1fr;gap:40px}.section-intro{font-size:13px;margin:20px 0}.process-list{margin-top:0}.process-list li{padding-block:23px;gap:20px}.process-list h3{font-size:21px}.process-list p{font-size:13px}.home-pricing{padding-top:55px}.pricing-grid{grid-template-columns:1fr;gap:17px;margin-top:32px}.price-card{padding:28px}.price-card-top{height:auto;flex-direction:row;align-items:center;margin-bottom:30px}.price-card-top .eyebrow{font-size:10px}.small-tag{font-size:8px;padding:5px 8px}.price-card h3{font-size:46px}.price-card>p{font-size:13px}.package-size{font-size:12px}.price-card .check-list li{font-size:12px}.price-card .button{font-size:12px;min-height:49px;padding:15px 18px}.price-card .renewal{font-size:10px}.pricing-note{font-size:10px;line-height:1.8}.cta-section{padding-bottom:55px}.cta-panel{padding:32px 27px;display:block;position:relative}.cta-panel .eyebrow{font-size:8px;margin-bottom:22px}.cta-panel h2{font-size:35px;letter-spacing:-1.6px;position:relative;z-index:1}.cta-panel p:not(.eyebrow){font-size:12px;max-width:280px;position:relative;z-index:1}.cta-panel .button{font-size:11px;gap:20px;position:relative;z-index:1}.cta-art{position:absolute;right:-100px;top:18px;opacity:.12;transform:scale(.95) rotate(-12deg)}.site-footer{padding-top:40px}.footer-top{grid-template-columns:1fr 1fr;gap:30px 20px;padding-bottom:35px}.footer-top>div:first-child{grid-column:1/-1}.footer-top>div>p{font-size:12px;margin-top:14px;margin-bottom:5px}.footer-brand{font-size:30px}.footer-links{font-size:11px;gap:13px}.footer-links>.eyebrow{font-size:7px}.footer-bottom{flex-wrap:wrap;font-size:8px;gap:15px;padding-block:22px}.footer-bottom>span:first-child{width:100%}.footer-location{margin-left:auto}.page-hero{padding-top:43px;padding-bottom:37px}.display-title{font-size:clamp(43px,10.7vw,62px);letter-spacing:-2.3px;line-height:1.05;margin-bottom:25px}.lead{font-size:14px;line-height:1.8}.two-col,.three-col{grid-template-columns:1fr;gap:22px}.info-card{padding:21px 0 0}.info-card h3{font-size:25px;margin-top:12px}.info-card p{font-size:13px}.numbered-list li{padding-left:35px;font-size:13px}.numbered-list h3,.numbered-list strong{font-size:21px}.callout{padding:25px;font-size:13px}.callout+.cta-section{padding-top:45px}.faq-grid{grid-template-columns:1fr}.faq-grid summary{font-size:16px}.faq-grid details{padding-block:21px}.prose h2,.article-body h2{font-size:30px;letter-spacing:-1px}.prose p,.prose li,.article-body p,.article-body li{font-size:14px}.insight-feature{padding:27px}.insight-feature h2{font-size:32px;letter-spacing:-1.4px}.insight-feature p{font-size:13px}.article-body{padding-bottom:55px}.article-body h2{margin-top:36px}.table-scroll th,.table-scroll td{font-size:12px;padding:12px 10px}.case-heading{display:block}.case-heading .tag-list{margin-top:22px;justify-content:flex-start;max-width:none}.case-visual{padding:21px 14px}.case-details{margin-top:30px;gap:18px}.case-details>div{border-top:1px solid var(--line);padding-top:22px}.case-details h3{font-size:24px;margin:12px 0}.case-details p{font-size:13px}.case-study+.callout{margin-top:45px}.contact-grid{padding-bottom:15px;gap:12px}.form-heading{padding-top:24px;margin-bottom:27px}.form-heading h2{font-size:29px}.field{margin-bottom:23px}.field input,.field select,.field textarea{font-size:16px}.form-row{grid-template-columns:1fr;gap:0}.brief-preview{padding:25px}.brief-preview h2{font-size:27px}.generated-brief{padding:15px;font-size:11px;min-height:320px}.copy-status{font-size:10px}.setup-notice p{font-size:11px}.contact-hero{padding-bottom:32px}}
 @media(max-width:370px){.container{width:calc(100% - 32px)}.hero-actions{flex-direction:column;align-items:flex-start;gap:16px}.hero-visual{height:calc((100vw - 32px)*1.02 + 50px)}.hero-software{top:calc((100vw - 32px)*.43 + 18px)}.hero-sticker{top:120px}.hero h1{font-size:45px}.brief-preview{padding:20px}.cta-panel{padding:28px 23px}.cta-panel h2{font-size:32px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Homepage chapters: native document scrolling, never a nested scroll container. */
+:root{--home-header-height:81px}
+.home-page>.home-section{position:relative;scroll-margin-top:16px}
+.home-section:focus{outline:none}
+.home-intro{background:var(--paper)}
+.home-page .hero{min-height:0}
+.home-page .section-navigation{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:20px 26px}
+.section-next{display:inline-flex;align-items:center;gap:20px;min-height:44px;font-size:12px;font-weight:600;border-bottom:1px solid currentColor}
+.section-next>span{font-size:22px;font-weight:400}
+.section-count{font-size:10px;letter-spacing:2px;color:inherit;opacity:.75}
+.home-section-content{padding-block:60px 0}
+.home-pricing{background:#e4eadc;border-block:1px solid #c7d2bb;padding:0}
+.home-pricing .section-heading{margin-bottom:28px}
+.home-pricing .pricing-grid{margin-top:0}
+.home-services{background:var(--green);color:var(--white)}
+.home-services .section{padding-bottom:0}
+.home-services p,.home-services .eyebrow{color:#d9e2ce}
+.home-services .service-card{padding:28px;border:1px solid #68815f;border-radius:8px;background:#304b36}
+.home-services .service-icon{color:var(--lime)}
+.home-services .tag-list>span{color:#e0e8d7;border-color:#68815f}
+.home-services .service-link{border-color:#68815f;font-weight:600}
+.home-services a:focus-visible{outline-color:var(--lime)}
+.home-page .work-section{background:var(--white)}
+.home-page .work-section>.section{padding-bottom:0}
+.home-page .work-card{border:1px solid #d6dbcc;border-radius:8px;background:var(--paper);overflow:hidden}
+.home-page .work-art{border-radius:0}
+.home-page .work-card-info{padding:25px}
+.home-page .work-grid{margin-top:32px}
+.home-process{background:#e3edcd;border-block:1px solid #c9d6b3}
+.home-process>.section{padding-bottom:0}
+.home-process .process-list{counter-reset:none}
+.home-process .process-list li{padding:24px;border:1px solid #bccaaa;border-radius:8px;background:#f7faef;margin-bottom:14px}
+.home-process .process-list>li>span{font-size:24px;font-weight:600;color:#48603a;padding-top:0}
+.home-page .home-contact{width:100%;max-width:none;background:var(--paper);padding:64px max(24px,calc((100% - 1280px)/2))}
+.home-contact .cta-panel{width:min(1280px,calc(100% - 64px));margin:auto;min-height:380px}
+
+/* Shared pricing cards: a clear hierarchy, including ongoing costs. */
+.price-card{--price-surface:#fffef9;--price-ink:#252b24;--price-muted:#55614f;--price-line:#bac5ad;background:var(--price-surface);color:var(--price-ink);border:1px solid var(--price-line);border-top:5px solid #a9bc8a;border-radius:10px;padding:26px;box-shadow:0 10px 25px #24352012;position:relative;min-width:0}
+.price-card-featured{--price-surface:#263e2d;--price-ink:#fffef9;--price-muted:#d9e2ce;--price-line:#68815f;border-top-color:var(--lime);box-shadow:0 14px 32px #263e2d30}
+.price-card-top{display:flex;min-height:15px;height:auto;align-items:center;margin-bottom:16px}
+.price-card-top .eyebrow{font-size:9px;letter-spacing:1px;color:var(--price-muted)}
+.recommended-badge{position:absolute;top:-16px;right:20px;border:1px solid #b8cd8b;border-radius:20px;background:var(--lime);color:var(--green);padding:7px 13px;font-size:11px;font-weight:700;line-height:1.2}
+.price-card .package-name{color:var(--price-ink);font-size:28px;font-weight:600;letter-spacing:-.8px;margin:0 0 8px}
+.price-card .package-description{color:var(--price-muted);font-size:13px;margin:0 0 20px}
+.price-card .package-price{color:var(--price-ink);font-size:clamp(40px,4vw,56px);font-weight:600;letter-spacing:-2px;line-height:1.1;margin:0 0 4px;white-space:nowrap}
+.package-price>span{font-size:18px;letter-spacing:0;font-weight:500}
+.price-card .price-context{color:var(--price-muted);font-size:11px;margin:0 0 18px}
+.price-card .package-size{color:var(--price-ink);font-size:12px;font-weight:600;border-color:var(--price-line);padding-block:14px}
+.price-card .check-list{margin-block:20px;gap:11px}
+.price-card .check-list li{color:var(--price-muted);font-size:12px}
+.price-card .check-list li:before{color:#48603a;font-weight:700}
+.price-card-featured .check-list li:before{color:var(--lime)}
+.price-card .button{font-size:13px;font-weight:600;min-height:50px;border-radius:5px;padding:15px 17px;gap:16px}
+.price-card .renewal{color:var(--price-muted);font-size:12px;margin:17px 0 0;line-height:1.6}
+.renewal strong,.renewal>span{display:block}
+.renewal strong{color:var(--price-ink);font-weight:600}
+.price-card-featured a:focus-visible{outline-color:var(--lime)}
+.pricing-note{font-size:12px;line-height:1.6;color:#55614f;margin:20px 0 0}
+.pricing-section .pricing-grid{margin-top:20px}
+
+/* Mouse/trackpad desktop only. Small, short, touch and zoomed viewports stay natural.
+   min-height (not height) lets long chapters grow; browsers allow free scrolling
+   inside oversized snap areas. No wheel/keyboard handlers or scroll locking. */
+@media(min-width:64rem) and (min-height:44rem) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  html.home-scroll-snap{scroll-snap-type:y mandatory;scroll-padding-top:var(--home-header-height)}
+  .home-scroll-snap .site-header{position:sticky;top:0}
+  .home-scroll-snap .nav-bar{height:80px}
+  .home-page>.home-section{min-height:calc(100svh - var(--home-header-height));scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:0;display:flex;flex-direction:column;justify-content:center}
+  .home-page .hero{padding-block:32px;flex:1}
+  .home-page .hero h1{font-size:clamp(52px,min(5.6vw,8.6svh),78px);margin-bottom:22px}
+  .home-page .hero-eyebrow{margin-bottom:22px}
+  .home-page .hero-description{margin-bottom:22px}
+  .home-page .hero-footnote{margin-top:22px}
+  .home-page .hero-visual{height:480px}
+  .home-page .hero-software{top:230px}
+  .home-page .hero-sticker{top:175px}
+  .home-page .section{padding-top:60px}
+  .home-page .home-pricing .section-navigation{padding-block:8px 16px}
+  .home-page .home-pricing .home-section-content{padding-top:40px}
+  .home-pricing .section-heading h2{font-size:clamp(36px,3.7vw,48px)}
+  .home-pricing .price-card{padding:22px}
+  .home-pricing .price-card .package-description{margin-bottom:14px}
+  .home-pricing .price-card .package-price{font-size:48px}
+  .home-pricing .price-card .check-list{margin-block:16px;gap:9px}
+  /* Keep the footer reachable and naturally scrollable after the last chapter. */
+  .home-scroll-snap .site-footer{scroll-snap-align:start;scroll-snap-stop:normal}
+}
+@media(max-width:63.999rem){
+  .pricing-grid{grid-template-columns:1fr;gap:28px;max-width:640px;margin-inline:auto}
+  .price-card{padding:28px}
+  .price-card .package-price{font-size:48px}
+  .home-services .service-card{padding:24px}
+  .home-contact .cta-panel{width:100%}
+}
+@media(max-width:600px){
+  .home-section-content{padding-top:48px}
+  .home-page .section-navigation{padding-block:18px 24px}
+  .section-next{font-size:11px;gap:12px}
+  .section-count{font-size:9px;letter-spacing:1px}
+  .home-services .service-grid{gap:20px}
+  .home-services .service-card{padding:24px}
+  .home-page .work-card-info{padding:20px}
+  .home-process .process-list li{padding:20px;gap:16px}
+  .home-page .home-contact{padding:48px 20px}
+  .home-contact .cta-panel{min-height:0}
+  .price-card{padding:26px}
+  .price-card .package-price{font-size:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  html.home-scroll-snap{scroll-snap-type:none;scroll-behavior:auto}
+}

@@ -38,7 +38,13 @@ npm run generate
 npm test
 ```
 
-Generate **before** testing: the generated-HTML checks are skipped if build output is absent. The contact fixture checks intentionally expect unconfigured, non-sendable preview placeholders. Automated tests are not an accessibility audit, a security audit, or browser coverage. Responsive and interaction QA must be performed separately; there is no `test:e2e` script. In the implementation environment, the managed preview reported “Dev server is unavailable”, so browser/mobile interaction checks and visual screenshots remain unverified. The automated build, typecheck, static generation, and all 18 Node tests passed. The production dependency audit reported no moderate, high, or critical issues; seven low-severity transitive advisories remain.
+Generate **before** testing: the generated-HTML checks are skipped if build output is absent. The contact fixture checks intentionally expect unconfigured, non-sendable preview placeholders. Automated tests are not an accessibility audit, a security audit, or browser coverage. Responsive and interaction QA must be performed separately; there is no `test:e2e` script. The automated build, typecheck, static generation, and all 35 Node tests passed after the homepage update. The tests include homepage-only snap eligibility, reactive route-class cleanup, section order and anchors, pricing structure, unchanged commercial values, and palette contrast calculations. Managed browser QA remains unverified: the Nuxt development server hit a sandbox network-interface restriction, and a generated static preview could not be reached by the managed browser. These source/static checks do not establish real mouse/trackpad, mobile, zoom, or Back/Forward interaction behavior. The production dependency audit reported no moderate, high, or critical issues; seven low-severity transitive advisories remain.
+
+### Homepage navigation and pricing
+
+The homepage now leads with **Hero → Packages → Services → Work → Process → Contact**, using distinct ivory, sage, forest, white, and pale-lime sections. The shared cards on the homepage and `/packages` emphasize the Business proposal without changing package prices or scope.
+
+Native CSS section snapping is enabled only for fine-pointer, hover-capable desktop viewports at least 64rem wide and 44rem high, when reduced motion is not requested. Small/short viewports and touch devices use normal scrolling. Section height can grow with content; nothing is clipped to fit a screen. The homepage class is derived reactively from the route, so other pages do not snap. Native “next section” links offer a precise alternative to scrolling. Browser/trackpad momentum still controls gestures; snapping does not guarantee exactly one section for every wheel movement.
 
 ## Configuration
 
