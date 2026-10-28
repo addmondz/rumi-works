@@ -1,0 +1,29 @@
+{
+  "name": "rumi-works",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/prepare-seo.mjs && nuxt dev --host 0.0.0.0",
+    "build": "node scripts/prepare-seo.mjs && nuxt build",
+    "generate": "node scripts/prepare-seo.mjs && nuxt generate",
+    "prerender": "npm run generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "nuxt": "4.6.3",
+    "vue": "^3.5.22",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.1"
+  }
+}
