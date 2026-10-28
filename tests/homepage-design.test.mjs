@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, existsSync } from 'node:fs'
 import { runInNewContext } from 'node:vm'
-import { routes } from '../scripts/seo-config.mjs'
+import { routes, demoRoutes } from '../scripts/seo-config.mjs'
 
 const read = path => readFileSync(path, 'utf8')
 const app = read('app/app.vue')
@@ -61,6 +61,7 @@ test('homepage snap class is reactive and removed on every non-home route', () =
   assert.ok(script, 'App shell has an inspectable setup script')
   runInNewContext(script, {
     useRoute: () => route,
+    computed: getter => ({ get value() { return getter() } }),
     useRuntimeConfig: () => ({ public: { siteUrl: '' } }),
     useHead: entry => headEntries.push(entry),
     useSeoMeta: () => {},
@@ -70,7 +71,7 @@ test('homepage snap class is reactive and removed on every non-home route', () =
     return String(value?.htmlAttrs?.class || '').split(/\s+/)
   })
   assert.ok(classes().includes('home-scroll-snap'))
-  for (const path of routes.filter(path => path !== '/')) {
+  for (const path of [...routes, ...demoRoutes].filter(path => path !== '/')) {
     route.path = path
     assert.ok(!classes().includes('home-scroll-snap'), `Snap class removed on ${path}`)
   }

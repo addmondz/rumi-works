@@ -1,6 +1,6 @@
 # Rumi Works
 
-A responsive, English-language marketing website for a proposed website and custom-software business serving SMEs in Kuala Lumpur and Selangor. Built with **Nuxt 4, Vue 3, and TypeScript**, with ten prerendered routes and a warm ivory, charcoal, and green visual system.
+A responsive, English-language marketing website for a proposed website and custom-software business serving SMEs in Kuala Lumpur and Selangor. Built with **Nuxt 4, Vue 3, and TypeScript**, with 25 prerendered routes (11 agency pages and 14 fictional demo pages) and a warm ivory, charcoal, and green visual system.
 
 This repository is a website implementation—not a live deployment. Contact channels, business details, commercial terms, and the privacy draft need owner approval before launch. The work gallery contains **illustrated concept demos with sample data**, not real client projects, testimonials, or claimed results.
 
@@ -73,7 +73,9 @@ The safe default is a non-indexable preview:
 - `robots.txt` disallows crawling;
 - no generated sitemap or invented canonical domain.
 
-Production indexing requires **both** `NUXT_PUBLIC_SITE_MODE=production` and a valid, non-local HTTPS `NUXT_PUBLIC_SITE_URL`. Generation then emits canonical URLs, an allow-crawl `robots.txt`, and `sitemap.xml` containing all ten routes. The configured URL is normalized to its origin. Preview indexing controls are not authentication or access control.
+The 14 fictional `/demos/` pages always use `noindex, follow`, including in production, and are deliberately excluded from the sitemap. They show package functionality; they are not real businesses to promote in search. In preview, `robots.txt` still disallows the entire site. Robots directives are not access controls.
+
+Production indexing requires **both** `NUXT_PUBLIC_SITE_MODE=production` and a valid, non-local HTTPS `NUXT_PUBLIC_SITE_URL`. Generation then emits canonical URLs, an allow-crawl `robots.txt`, and `sitemap.xml` containing the 11 agency routes (including `/showcase`). The configured URL is normalized to its origin. Preview indexing controls are not authentication or access control.
 
 ## Pages and source map
 
@@ -98,7 +100,7 @@ Production indexing requires **both** `NUXT_PUBLIC_SITE_MODE=production` and a v
 - `tests/`: SEO configuration and generated-page assertions.
 - `public/`: local public assets; generated robots and sitemap files are intentionally ignored by Git.
 
-Keep the route list in `nuxt.config.ts` and `scripts/seo-config.mjs` aligned when adding or removing pages.
+Keep the prerender list in `nuxt.config.ts` aligned with both `routes` (agency sitemap pages) and `demoRoutes` (fictional, noindex demonstration pages) in `scripts/seo-config.mjs`.
 
 ## Proposed commercial content
 
@@ -143,3 +145,42 @@ The site assumes deployment at the domain root. Subdirectory hosting needs expli
 ## Framework reference
 
 [Nuxt prerendering documentation](https://nuxt.com/docs/4.x/getting-started/prerendering)
+
+## Corporate showcase and working package demos
+
+`/showcase` is an additional, self-contained premium editorial design direction; the existing homepage and its chapter/snap behavior are preserved. It is discoverable from the shared main navigation and footer. All three packages use the same considered visual identity: **design style is not a package tier**. Page allowance and content management distinguish the packages. Bespoke interaction work is agreed in the written scope, not added as an unlimited inclusion.
+
+The showcase uses original local SVG architectural artwork, a charcoal/ivory/lime palette, a pricing section immediately after the hero, an illustrative sticky browser stage, a practical process and native accessible FAQ disclosures. No client logos, endorsements, revenue metrics or fabricated delivery results are used. No heavy video, external runtime fonts, animation libraries or new dependencies were added.
+
+### Exact demonstration routes
+
+All demonstrations use **FORME**, a prominently labelled fictional workplace consultancy.
+
+| Package | Pages | Routes (under prefix) |
+| --- | ---: | --- |
+| Launch | 1 | `/demos/launch` — six sections: hero, approach, services, concept work, process and enquiry preview |
+| Business | 5 | `/demos/business`, `/about`, `/services`, `/work`, `/contact` |
+| Growth | 8 | `/demos/growth`, `/about`, `/services`, `/work`, `/contact`, `/insights`, `/insights/a-better-workplace-brief`, `/studio` |
+
+The suffixes in the table are relative to each package prefix, not additional agency routes. Every page has its own meaningful prerendered content, heading, title and description. The Growth article and content studio count toward the eight-page demonstration, not as extra promised pages. These are illustrative scope examples; the actual client page list is agreed in the quotation.
+
+### Safe interactive examples
+
+- Enquiry forms build a text preview only. Nothing is sent, booked or stored. Example contact details are inert `.example` / `XX` placeholders. Form data disappears when its page is left or fully reloaded.
+- The Growth studio edits a sample homepage headline and article title/summary using Nuxt app memory. Follow the studio links to see the changes; reset restores the original copy. A full reload discards the edits. No localStorage, database, authentication or publishing backend is used.
+- Preview submit buttons require hydration; without JavaScript, content and navigation remain readable and forms cannot submit.
+- Growth still includes the proposed standard CMS setup. The preview does **not** claim that a production CMS is installed. Actual platform, editable fields, permissions, integrations and handover are agreed in scope; custom workflows are quoted separately.
+
+### SEO and motion
+
+The showcase uses a single H1, native navigation and FAQ elements, rendered copy, descriptive metadata and links into every demo. Canonical and Open Graph URLs, Organization and breadcrumb structured data are emitted only when the existing HTTPS-origin configuration is set. Schema uses only the Rumi Works name and configured website, with no invented address, ratings, customer list or business registration. Agency pages retain the existing preview/production indexing gate.
+
+Reveals progressively enhance visible content after IntersectionObserver detects an entrance; no content is hidden while awaiting JavaScript. With reduced motion, transforms, entrances and sticky positioning are removed. Mobile uses a normal, single-column document flow. No wheel interception or custom scroll engine is installed; the original homepage-only snap logic is unchanged.
+
+Additional sources: `app/pages/showcase.vue`, `app/assets/css/showcase.css`, `app/pages/demos/`, `app/components/demo/`, `app/utils/demo-content.ts`, `app/assets/css/demos.css`, and the two original `public/showcase-*.svg` assets. Tests in `tests/showcase.test.mjs` cover the route contract, content helpers, safe forms, metadata, local links, disclosure, reduced-motion and visible-source invariants. Static/source assertions are not a substitute for a rendered responsive/accessibility audit.
+
+### Showcase verification (October 2026)
+
+The final update passed Nuxt typecheck, production build, static generation and all 66 Node tests. An isolated production-mode fixture also verified all 25 canonical/OG URL and robots values, the truthful showcase schema and the 11-entry agency-only sitemap; the generated output was then restored to the safe default preview configuration.
+
+The managed Nuxt development preview returned “Dev server is unavailable.” A supported managed **static preview of the generated output** worked, so browser QA was completed there—not on a deployment. Desktop checks covered the showcase and Growth compositions, the pricing links, actual CMS edit/apply/navigation/reset/reload behavior, repeated enquiry preview/reset, and normal scrolling outside the homepage. Home → Back to showcase → Forward to home restored/removed the homepage snap class correctly in the browser. Narrow-layout checks used a 393-CSS-pixel viewport via browser zoom: no horizontal overflow, menu open/close, Escape focus restoration and dismissal after navigation. Browser device emulation was unavailable because organization policy blocks DevTools; a physical mobile device and runtime reduced-motion emulation were not tested. Reduced-motion and no-JavaScript safety are covered by source/generated-output checks, not claimed as complete browser audits. A direct-refresh trailing-slash shell issue found during QA was fixed and regression-tested. Decorative arrow glyphs were replaced with inline SVG after the browser exposed missing font glyphs.

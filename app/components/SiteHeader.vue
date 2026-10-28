@@ -7,7 +7,8 @@ const links = [
   { label: 'Software', to: '/custom-software' },
   { label: 'Our approach', to: '/work' },
   { label: 'Packages', to: '/packages' },
-  { label: 'About', to: '/about' }
+  { label: 'About', to: '/about' },
+  { label: 'Showcase', to: '/showcase' }
 ]
 watch(() => route.path, () => { open.value = false })
 function closeMenu() { open.value = false; toggle.value?.focus() }
