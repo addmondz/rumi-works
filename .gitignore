@@ -13,3 +13,4 @@ qa-screenshots/
 public/robots.txt
 public/sitemap.xml
 *.log
+/dist

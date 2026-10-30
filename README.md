@@ -1,6 +1,6 @@
 # Rumi Works
 
-A responsive, English-language marketing website for a proposed website and custom-software business serving SMEs in Kuala Lumpur and Selangor. Built with **Nuxt 4, Vue 3, and TypeScript**, with 25 prerendered routes (11 agency pages and 14 fictional demo pages) and a warm ivory, charcoal, and green visual system.
+A responsive, English-language marketing website for a proposed website and custom-software business serving SMEs in Kuala Lumpur and Selangor. Built with **Nuxt 4, Vue 3, and TypeScript**, with 26 prerendered routes (12 agency pages and 14 fictional demo pages) and a warm ivory, charcoal, and green visual system.
 
 This repository is a website implementation—not a live deployment. Contact channels, business details, commercial terms, and the privacy draft need owner approval before launch. The work gallery contains **illustrated concept demos with sample data**, not real client projects, testimonials, or claimed results.
 
@@ -75,7 +75,7 @@ The safe default is a non-indexable preview:
 
 The 14 fictional `/demos/` pages always use `noindex, follow`, including in production, and are deliberately excluded from the sitemap. They show package functionality; they are not real businesses to promote in search. In preview, `robots.txt` still disallows the entire site. Robots directives are not access controls.
 
-Production indexing requires **both** `NUXT_PUBLIC_SITE_MODE=production` and a valid, non-local HTTPS `NUXT_PUBLIC_SITE_URL`. Generation then emits canonical URLs, an allow-crawl `robots.txt`, and `sitemap.xml` containing the 11 agency routes (including `/showcase`). The configured URL is normalized to its origin. Preview indexing controls are not authentication or access control.
+Production indexing requires **both** `NUXT_PUBLIC_SITE_MODE=production` and a valid, non-local HTTPS `NUXT_PUBLIC_SITE_URL`. Generation then emits canonical URLs, an allow-crawl `robots.txt`, and `sitemap.xml` containing the 12 agency routes (including `/showcase` and `/create-website`). The configured URL is normalized to its origin. Preview indexing controls are not authentication or access control.
 
 ## Pages and source map
 
@@ -91,6 +91,7 @@ Production indexing requires **both** `NUXT_PUBLIC_SITE_MODE=production` and a v
 | `/insights` | `app/pages/insights/index.vue` |
 | `/insights/website-cost-malaysia` | `app/pages/insights/website-cost-malaysia.vue` |
 | `/privacy` | `app/pages/privacy.vue` |
+| `/create-website` | `app/pages/create-website.vue` |
 
 - `app/components/`: shared navigation, footer, pricing, calls to action, and illustrated project previews.
 - `app/assets/css/main.css`: global design system and responsive layouts.
@@ -184,3 +185,27 @@ Additional sources: `app/pages/showcase.vue`, `app/assets/css/showcase.css`, `ap
 The final update passed Nuxt typecheck, production build, static generation and all 66 Node tests. An isolated production-mode fixture also verified all 25 canonical/OG URL and robots values, the truthful showcase schema and the 11-entry agency-only sitemap; the generated output was then restored to the safe default preview configuration.
 
 The managed Nuxt development preview returned “Dev server is unavailable.” A supported managed **static preview of the generated output** worked, so browser QA was completed there—not on a deployment. Desktop checks covered the showcase and Growth compositions, the pricing links, actual CMS edit/apply/navigation/reset/reload behavior, repeated enquiry preview/reset, and normal scrolling outside the homepage. Home → Back to showcase → Forward to home restored/removed the homepage snap class correctly in the browser. Narrow-layout checks used a 393-CSS-pixel viewport via browser zoom: no horizontal overflow, menu open/close, Escape focus restoration and dismissal after navigation. Browser device emulation was unavailable because organization policy blocks DevTools; a physical mobile device and runtime reduced-motion emulation were not tested. Reduced-motion and no-JavaScript safety are covered by source/generated-output checks, not claimed as complete browser audits. A direct-refresh trailing-slash shell issue found during QA was fixed and regression-tested. Decorative arrow glyphs were replaced with inline SVG after the browser exposed missing font glyphs.
+
+## Instant website preview studio
+
+`/create-website` is an intentionally small, browser-only preview generator. It asks for **one business/industry text input** and **Fancy or Informative**, then generates immediately. No signup, mandatory business name/logo/contact details, fake progress timer, paid service, backend or AI API is involved. The header, homepage and showcase link to the studio.
+
+- **Fancy:** editorial serif typography, industry-specific warm/botanical/creative palettes, original local SVG concept artwork and subtle progressive scroll entrances.
+- **Informative:** a separate navy/blue business direction, clear sans-serif hierarchy, service cards and direct section navigation.
+- Known industry words choose starter copy and artwork; arbitrary custom genres receive an editable generic direction. All generated content is explicitly draft/illustrative. No invented clients, reviews, prices, qualifications, addresses, contact details or results are supplied.
+- **Edit genre / style** returns to the two choices; generating again replaces the latest draft and text edits. **Edit preview text** changes the name, headline, introduction, about, offer and next-step text live. **Start over** clears input, style and draft. Back/Forward changes the setup/preview view while retaining only the latest in-memory draft; it is not a saved version history.
+- Normalized genre length is 2–80 Unicode code points. Empty/overlong input gets an inline error without silent truncation. All visitor text is Vue-escaped, never HTML or executable code.
+- State lives in Nuxt's client-memory state only. It survives internal navigation in the current tab, but not refresh/close. There is no local/session storage, account, save, export or publish feature. No input is placed in URLs, page titles, canonical URLs or sitemap entries. Fixed hash fragments provide in-page navigation only.
+- The production-eligible landing page is prerendered with empty state. Generated concepts exist only in client memory and set `noindex, nofollow`; neither concept content nor personal inputs enter static output. Existing preview-mode robots protections and the 14 non-indexable demo routes remain unchanged.
+- Keyboard-accessible native controls, field labels, error focus, preview-heading focus and reduced-motion fallbacks are included. With JavaScript off, the page explains the limitation and links to readable showcase/package pages. The preview contains no sending contact form.
+
+### Studio source and checks
+
+- `app/pages/create-website.vue`: setup, preview rendering, editor and local navigation.
+- `app/utils/website-preview.ts`: deterministic genre normalization, validation and starter selection.
+- `app/components/generator/`: self-contained SVG illustrations and icons, no external image/font requests.
+- `app/assets/css/generator.css`: isolated studio and two-direction responsive styles.
+- `tests/website-preview-model.test.mjs`: pure input/content behavior.
+- `tests/website-generator.test.mjs`: actual Vue template SSR, controlled setup/reactivity tests and prerendered HTML checks. These tests distinguish source/SSR behavior from a real browser and do not claim physical-device coverage.
+
+Use the full verification commands above after changes. The latest implementation was checked with Node 24, Nuxt typecheck, a production build, static generation and all 88 Node tests (no skips). Browser QA against generated static output covered both directions, empty input, editing, Back/Forward, regenerated latest drafts, reset, fixed metadata and client-side noindex. Desktop and 391 CSS-pixel layouts (300% desktop browser zoom) had no horizontal overflow; this is not physical-phone testing. A separate local production-mode generation and browser check confirmed the landing is indexable while a generated draft switches to noindex, without placing visitor input in its title or canonical URL. Reduced-motion behavior is covered by the controlled test harness and CSS inspection, not an OS-level browser emulation. The managed Nuxt dev preview was unavailable; the supported managed static preview served the generated output instead. Nothing was deployed as part of these checks.

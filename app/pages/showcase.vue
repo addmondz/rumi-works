@@ -43,9 +43,9 @@ const questions = [
     <header class="sc-header" @keydown.esc="closeMenu">
       <NuxtLink class="sc-brand" to="/" aria-label="Rumi Works home">rumi<span>works</span><i aria-hidden="true">.</i></NuxtLink>
       <nav class="sc-desktop-nav" aria-label="Showcase navigation"><a href="#packages">Packages</a><a href="#experience">The experience</a><a href="#approach">Our approach</a></nav>
-      <NuxtLink class="sc-header-contact" to="/contact">Let’s talk <span aria-hidden="true"><svg class="rw-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg></span></NuxtLink>
+      <NuxtLink class="sc-header-contact" to="/create-website">Try your website <span aria-hidden="true"><svg class="rw-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg></span></NuxtLink>
       <button ref="menuButton" class="sc-menu-button" :aria-expanded="menuOpen" aria-controls="showcase-menu" @click="menuOpen = !menuOpen">{{ menuOpen ? 'Close −' : 'Menu +' }}</button>
-      <nav v-if="menuOpen" id="showcase-menu" class="sc-mobile-nav" aria-label="Showcase mobile navigation" @click="menuOpen = false"><a href="#packages">Packages</a><a href="#experience">The experience</a><a href="#approach">Our approach</a><NuxtLink to="/contact">Let’s talk</NuxtLink></nav>
+      <nav v-if="menuOpen" id="showcase-menu" class="sc-mobile-nav" aria-label="Showcase mobile navigation" @click="menuOpen = false"><a href="#packages">Packages</a><a href="#experience">The experience</a><a href="#approach">Our approach</a><NuxtLink to="/create-website">Try your website</NuxtLink><NuxtLink to="/contact">Let’s talk</NuxtLink></nav>
     </header>
 
     <section class="sc-hero" aria-labelledby="showcase-title">

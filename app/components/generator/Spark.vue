@@ -1,0 +1,1 @@
+<template><svg class="gw-spark" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M50 10v80M10 50h80M22 22l56 56M22 78l56-56" /></svg></template>

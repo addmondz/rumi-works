@@ -25,14 +25,14 @@ const metadata = (html, name) => [...html.matchAll(/<meta\b[^>]*>/gi)].map(match
 const title = html => html.match(/<title>([^<]*)<\/title>/)?.[1]
 
 // The same registry drives the sitemap and expected generated paths.
-test('showcase has 11 agency routes and exactly 1 / 5 / 8 independent demo routes', () => {
-  assert.equal(routes.length, 11)
+test('showcase has 12 agency routes and exactly 1 / 5 / 8 independent demo routes', () => {
+  assert.equal(routes.length, 12)
   assert.ok(routes.includes('/showcase'))
   assert.equal(demoRoutes.length, 14)
   assert.equal(demoRoutes.filter(path => path.startsWith('/demos/launch')).length, 1)
   assert.equal(demoRoutes.filter(path => path.startsWith('/demos/business')).length, 5)
   assert.equal(demoRoutes.filter(path => path.startsWith('/demos/growth')).length, 8)
-  assert.equal(new Set([...routes, ...demoRoutes]).size, 25)
+  assert.equal(new Set([...routes, ...demoRoutes]).size, 26)
   assert.ok(routes.every(path => !path.startsWith('/demos/')))
   const fromNavigation = Object.entries(demoNavigation).flatMap(([tier, entries]) => entries.map(entry => `/demos/${tier}${entry.slug}`))
   assert.deepEqual([...demoRoutes].sort(), fromNavigation.sort())
@@ -50,7 +50,7 @@ test('production sitemap includes the agency showcase but no fictional demo', as
     })
     const sitemap = await readFile(join(directory, 'public/sitemap.xml'), 'utf8')
     assert.match(sitemap, /<loc>https:\/\/confirmed\.example\/showcase<\/loc>/)
-    assert.equal((sitemap.match(/<url>/g) || []).length, 11)
+    assert.equal((sitemap.match(/<url>/g) || []).length, 12)
     assert.doesNotMatch(sitemap, /\/demos\//)
   } finally { await rm(directory, { recursive: true, force: true }) }
 })

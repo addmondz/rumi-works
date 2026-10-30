@@ -9,7 +9,7 @@ const indexable = process.env.NUXT_PUBLIC_SITE_MODE === 'production' && Boolean(
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
   devtools: { enabled: false },
-  css: ['~/assets/css/main.css', '~/assets/css/showcase.css', '~/assets/css/demos.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/showcase.css', '~/assets/css/demos.css', '~/assets/css/generator.css'],
   app: {
     head: {
       htmlAttrs: { lang: 'en-MY' },
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: true,
-      routes: ['/', '/website-development', '/custom-software', '/packages', '/work', '/about', '/contact', '/insights', '/insights/website-cost-malaysia', '/privacy', '/showcase', '/demos/launch', '/demos/business', '/demos/business/about', '/demos/business/services', '/demos/business/work', '/demos/business/contact', '/demos/growth', '/demos/growth/about', '/demos/growth/services', '/demos/growth/work', '/demos/growth/contact', '/demos/growth/insights', '/demos/growth/insights/a-better-workplace-brief', '/demos/growth/studio']
+      routes: ['/', '/create-website', '/website-development', '/custom-software', '/packages', '/work', '/about', '/contact', '/insights', '/insights/website-cost-malaysia', '/privacy', '/showcase', '/demos/launch', '/demos/business', '/demos/business/about', '/demos/business/services', '/demos/business/work', '/demos/business/contact', '/demos/growth', '/demos/growth/about', '/demos/growth/services', '/demos/growth/work', '/demos/growth/contact', '/demos/growth/insights', '/demos/growth/insights/a-better-workplace-brief', '/demos/growth/studio']
     }
   },
   typescript: { strict: true }
